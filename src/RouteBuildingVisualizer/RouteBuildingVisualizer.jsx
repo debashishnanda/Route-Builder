@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import Node from './Node/Node';
+
 import {dijkstra, getNodesInShortestPathOrder} from '../algorithms/dijkstra';
+import {DFS, getNodesInShortestPathOrderDFS} from '../algorithms/dfs';
+import {BFS, getNodesInShortestPathOrderBFS} from '../algorithms/bfs';
 
 import './RouteBuildingVisualizer.css';
 
@@ -8,6 +11,7 @@ const START_NODE_ROW = 10;
 const START_NODE_COL = 15;
 const FINISH_NODE_ROW = 10;
 const FINISH_NODE_COL = 35;
+
 
 export default class RouteBuildingVisualizer extends Component {
   constructor() {
@@ -38,7 +42,7 @@ export default class RouteBuildingVisualizer extends Component {
     this.setState({mouseIsPressed: false});
   }
 
-  animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder) {
+  animateAlgorithm(visitedNodesInOrder, nodesInShortestPathOrder) {
     for (let i = 0; i <= visitedNodesInOrder.length; i++) {
       if (i === visitedNodesInOrder.length) {
         setTimeout(() => {
@@ -70,16 +74,40 @@ export default class RouteBuildingVisualizer extends Component {
     const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
     const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
-    this.animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
+    this.animateAlgorithm(visitedNodesInOrder, nodesInShortestPathOrder);
+  }
+
+  visualizeDFS() {
+    const {grid} = this.state;
+    const startNode = grid[START_NODE_ROW][START_NODE_COL];
+    const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
+    const visitedNodesInOrder = DFS(grid, startNode, finishNode);
+    const nodesInShortestPathOrder = getNodesInShortestPathOrderDFS(finishNode);
+    this.animateAlgorithm(visitedNodesInOrder, nodesInShortestPathOrder);
+  }
+
+  visualizeBFS() {
+    const {grid} = this.state;
+    const startNode = grid[START_NODE_ROW][START_NODE_COL];
+    const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
+    const visitedNodesInOrder = BFS(grid, startNode, finishNode);
+    const nodesInShortestPathOrder = getNodesInShortestPathOrderBFS(finishNode);
+    this.animateAlgorithm(visitedNodesInOrder, nodesInShortestPathOrder);
   }
 
   render() {
     const {grid, mouseIsPressed} = this.state;
-
+    
     return (
-      <>
-        <button onClick={() => this.visualizeDijkstra()}>
-          <h1>Run Dijkstra's Algorithm</h1>
+      <>                
+        <button className = "white button" onClick={() => this.visualizeDijkstra()}>
+          <span>Run Dijkstra's Algorithm</span>
+        </button>
+        <button className = "white button" onClick={() => this.visualizeDFS()}>
+          <span>Run DFS Algorithm</span>
+        </button>
+        <button className = "white button" onClick={() => this.visualizeBFS()}>
+          <span>Run BFS Algorithm</span>
         </button>
         <div className="grid">
           {grid.map((row, rowIdx) => {

@@ -36,3 +36,165 @@
     transform: rotate(360deg);
   }
 }
+
+.button {
+  border-radius: 4px;
+  text-align: justify;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.blu1{
+  border-radius: 4px;
+  background-color: #3fcdf8;
+  border: none;
+  color: rgb(56, 30, 128);
+  text-align: center;
+  cursor: pointer;
+  margin: 5px;
+  font-size: x-large; 
+}
+
+.blu{
+  border-radius: 4px;
+  background-color: #8f2fbb;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  margin: 5px;
+  font-size: large; 
+}
+
+.brn{
+  border-radius: 4px;
+  background-color: brown;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  margin: 5px;
+  font-size: large; 
+}
+
+.red{
+  background-color: #c25838;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  margin: 5px;
+  font-size: medium; 
+}
+
+.gre{
+  background-color: #37c55a;
+  border: none;
+  color: #FFFFFF;
+  text-align: justify;
+  cursor: pointer;
+  align-content: center;
+  margin: 5px;
+  font-size: medium; 
+}
+
+.boxp{
+  border: 1px solid gray;
+  padding: 8px;
+  -webkit-backdrop-filter: drop-shadow();
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+
+.button1 {
+  position: relative;
+  text-transform: capitalize;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button1:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.white{
+  background-color: #707070;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-content: center;
+  margin: 5px;
+  font-size: medium;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("bground.jpg");
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

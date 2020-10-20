@@ -1,16 +1,17 @@
 .node {
   width: 25px;
   height: 25px;
+  background-color: inherit;
   outline: 1px solid rgba(0, 0, 66, 0.75);
   display: inline-block;
 }
 
 .node-finish {
-  background-color: red;
+  background-color: rgb(0, 0, 0);
 }
 
 .node-start {
-  background-color: greenyellow;
+  background-color: rgb(255, 255, 255);
 }
 
 .node-visited {
@@ -27,27 +28,27 @@
 @keyframes visitedAnimation {
   0% {
     transform: scale(0.3);
-    background-color: #dd0000bf;
+    background-color: #000000bf;
     border-radius: 100%;
   }
 
   50% {
-    background-color: #ffa600;
+    background-color: #fcfcfc;
   }
 
   75% {
     transform: scale(1.2);
-    background-color: #fbff0f;
+    background-color: #4e4d4d;
   }
 
   100% {
     transform: scale(1);
-    background-color: rgb(108, 255, 40);
+    background-color: whitesmoke;
   }
 }
 
 .node-wall {
-  background-color: rgb(12, 53, 71);
+  background-color: rgb(0, 0, 0);
 }
 
 .node-shortest-path {
@@ -64,16 +65,16 @@
 @keyframes shortestPath {
   0% {
     transform: scale(0.6);
-    background-color: #6adcff;
+    background-color: #f7f7f7;
   }
 
   50% {
     transform: scale(1.2);
-    background-color: #1900ff;
+    background-color: #6efd9ecb;
   }
 
   100% {
     transform: scale(1);
-    background-color: rgb(0, 204, 255);
+    background-color: rgb(99, 98, 98);
   }
 }
