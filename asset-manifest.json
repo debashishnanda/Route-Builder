@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Route-Builder/static/css/main.0d748b3d.chunk.css",
+    "main.js": "/Route-Builder/static/js/main.5c60f005.chunk.js",
+    "main.js.map": "/Route-Builder/static/js/main.5c60f005.chunk.js.map",
+    "runtime-main.js": "/Route-Builder/static/js/runtime-main.e0da9bd3.js",
+    "runtime-main.js.map": "/Route-Builder/static/js/runtime-main.e0da9bd3.js.map",
+    "static/js/2.046a49f0.chunk.js": "/Route-Builder/static/js/2.046a49f0.chunk.js",
+    "static/js/2.046a49f0.chunk.js.map": "/Route-Builder/static/js/2.046a49f0.chunk.js.map",
+    "index.html": "/Route-Builder/index.html",
+    "precache-manifest.e89bd4377c75576f4e4c0a2aca43e9d7.js": "/Route-Builder/precache-manifest.e89bd4377c75576f4e4c0a2aca43e9d7.js",
+    "service-worker.js": "/Route-Builder/service-worker.js",
+    "static/css/main.0d748b3d.chunk.css.map": "/Route-Builder/static/css/main.0d748b3d.chunk.css.map",
+    "static/js/2.046a49f0.chunk.js.LICENSE.txt": "/Route-Builder/static/js/2.046a49f0.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Route-Builder/static/media/bground.ada3c8e7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0da9bd3.js",
+    "static/js/2.046a49f0.chunk.js",
+    "static/css/main.0d748b3d.chunk.css",
+    "static/js/main.5c60f005.chunk.js"
+  ]
+}
